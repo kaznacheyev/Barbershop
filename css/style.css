@@ -15,10 +15,19 @@ body {
 	clear: both;
 }
 
+.inner-page {
+	color: #000000;
+	background: #f8f3f0 url(../img/pattern-white.jpg) repeat;
+}
+
 .main-header {
 	margin-bottom: 60px;
 	background-color: #000000;
 	color: #ffffff;
+}
+
+.inner-page .main-header {
+	margin-bottom: 55px;
 }
 
 .container {
@@ -41,6 +50,46 @@ body {
 
 .main-navigation a:hover {
 	background: #242424;
+}
+
+.main-navigation .active {
+	position: relative;
+	background-color: none;
+}
+
+.main-navigation .active::after {
+	content: "";
+	position: absolute;
+	right: 20px;
+	left: 20px;
+	bottom: 0;
+	height: 5px;
+	background-color: #fff;
+}
+
+.main-navigation .active a:hover {
+	background: none;
+}
+
+.main-navigation .active span {
+	display: block;
+	padding: 25px 20px;
+}
+
+.main-navigation .logo-inner {
+	float: left;
+	width: 111px;
+	height: 20px;
+	padding-top: 23px;
+}
+
+.main-navigation .logo-inner img {
+	width: 111px;
+	height: 20px;
+}
+
+.main-navigation .logo-inner:hover {
+	background: none;
 }
 
 .main-navigation ul {
@@ -290,6 +339,20 @@ body {
 	width: 100%;
 }
 
+/* Стили внутренних страниц */
+
+.inner-page-title {
+	margin-bottom: 55px;
+}
+
+.inner-page-title h1 {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	font-size: 30px;
+	line-height: 42px;
+}
+
 .main-footer {
 	margin-top: 65px;
 	padding-top: 60px;
@@ -333,8 +396,8 @@ body {
 	vertical-align: top;
 	background: #000000 url(../img/icon-sprites.png) no-repeat center;
 	transition: 
-		background-position 0.5s,
-		background-color 0.5s;
+	background-position 0.5s,
+	background-color 0.5s;
 }
 
 .social-btn:hover {
