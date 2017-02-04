@@ -353,6 +353,101 @@ body {
 	line-height: 42px;
 }
 
+.breadcrumbs {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.breadcrumbs li {
+	position: relative;
+	display: inline;
+	padding-right: 40px;
+}
+
+.breadcrumbs a {
+	color: #000;
+	text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumbs .current {
+	color: #aba9a7;
+}
+
+.breadcrumbs li::after {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	top: 5px;
+	right: 14px;
+	background-color: #000;
+	transform: rotate(45deg);
+}
+
+.breadcrumbs .current::after {
+	display: none;
+}
+
+/* Общие стили для контентных тегов */
+
+.inner-content {
+	margin-bottom: 75px;
+}
+
+.inner-content h2 {
+	margin-top: 60px;
+	margin-bottom: 30px;
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.inner-content p {
+	margin: 14px 0;
+}
+
+.inner-content table {
+	border-collapse: collapse;
+}
+
+.inner-content td {
+	padding: 10px 15px;
+	border: 2px solid #000000;
+}
+
+/* Особые стили для контентных тегов */
+
+.big-heading {
+	margin-top: 55px;
+	margin-bottom: 65px;
+	text-align: center;
+}
+
+.big-heading h2 {
+	position: relative;
+	margin: 0;
+	padding: 0 25px;
+	font-size: 48px;
+	line-height: 48px;
+	display: inline;
+	text-align: center;
+	z-index: 2;
+	background: #f8f3f0 url(../img/pattern-white.jpg) repeat;
+}
+
+.big-heading::after {
+	content: "";
+	display: block;
+	position: relative;
+	top: -25px;
+	z-index: 1;
+	border-bottom: 2px solid #000000;
+}
+
 .main-footer {
 	margin-top: 65px;
 	padding-top: 60px;
