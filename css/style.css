@@ -21,6 +21,7 @@ body {
 }
 
 .main-header {
+	min-height: 70px;
 	margin-bottom: 60px;
 	background-color: #000000;
 	color: #ffffff;
@@ -86,6 +87,11 @@ body {
 .main-navigation .logo-inner img {
 	width: 111px;
 	height: 20px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .main-navigation .logo-inner:hover {
@@ -601,18 +607,46 @@ body {
 	margin-right: 0;
 }
 
-/* Всплывающая форма */
+/* Всплывающие формы */
 
 .modal-content {
-	position: absolute;
+	position: fixed;
 	top: 120px;
 	left: 50%;
+	z-index: 20;
 	margin-left: -230px;
 	width: 300px;
+	display: none;
 	padding: 50px 80px;
 	color: #000000;
 	background: #f8f3f0 url(../img/pattern-white.jpg);
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-map {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	display: none;
+	z-index: 20;
+	margin-top: -280px;
+	margin-left: -390px;
+	width: 766px;
+	height: 560px;
+	background: #e9e5dc url(../img/map.jpg);
+	border: 7px solid #ffffff;
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content-close {
@@ -645,5 +679,107 @@ body {
 }
 
 .modal-content-close::after {
+	transform: rotate(-45deg);
+}
+
+.modal-content h2 {
+	margin: 0;
+	margin-bottom: 20px;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.modal-content p {
+	margin: 0;
+	margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+	width: 236px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	padding-right: 40px;
+	background-color: #f9f6f3;
+	border: 2px solid #000000;
+	outline: none;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.login-form input:focus {
+	border-color: #663d15;
+}
+
+.login-form input.icon-user {
+	background-image: url(../img/user-login.png);
+	background-repeat: no-repeat;
+	background-position: 95% 15px;
+}
+
+.login-form input.icon-password {
+	background-image: url(../img/password.png);
+	background-repeat: no-repeat;
+	background-position: 95% 14px;
+}
+
+.login-form .restore {
+	float: right;
+	color: #000000;
+}
+
+.login-form .btn {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.login-checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.login-checkbox {
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.login-checkbox:hover {
+	color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	top: -2px;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 1px;
+	width: 15px;
+	height: 2px;
+	background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+	transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
 	transform: rotate(-45deg);
 }
