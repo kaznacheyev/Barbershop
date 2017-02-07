@@ -623,6 +623,10 @@ img {
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
 }
 
+.modal-content-show {
+	display: block;
+}
+
 .modal-content-map {
 	position: fixed;
 	top: 50%;
