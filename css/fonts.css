@@ -1,0 +1,19 @@
+/* PT Sans Narrow Regular */
+@font-face {
+	font-family: "PT Sans Narrow";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/PTSansNarrowRegular/PTSansNarrow.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/PTSansNarrowRegular/PTSansNarrow.woff") format("woff"),
+	url("../fonts/PTSansNarrowRegular/PTSansNarrow.ttf") format("truetype");
+}
+
+/* PT Sans Narrow Bold */
+@font-face {
+	font-family: "PT Sans Narrow";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../fonts/PTSansNarrowBold/PTSansNarrowBold.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/PTSansNarrowBold/PTSansNarrowBold.woff") format("woff"),
+	url("../fonts/PTSansNarrowBold/PTSansNarrowBold.ttf") format("truetype");	
+}

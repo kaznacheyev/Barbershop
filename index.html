@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<title>Barbershop «Бородинский»</title>	
 	<link rel="stylesheet" href="css/normalize.css">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,11 +14,11 @@
 		<div class="container clearfix">
 			<nav class="main-navigation">
 				<ul>
-					<li><a href="#">Информация</a></li>
-					<li><a href="#">Новости</a></li>
+					<li><a href="#info">Информация</a></li>
+					<li><a href="#news">Новости</a></li>
 					<li><a href="price.html">Прайс-лист</a></li>
 					<li><a href="#">Магазин</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="#contacts">Контакты</a></li>
 				</ul>
 			</nav>
 			<div class="user-block">
@@ -32,6 +33,7 @@
 		</div>
 		<section class="features clearfix">
 			<div class="features-item">
+				<a name="info"></a>
 				<b class="features-name">Быстро</b>
 				<p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки!</p>
 			</div>
@@ -46,7 +48,7 @@
 		</section>
 		<div class="index-content clearfix">
 			<div class="index-content-left">
-				<h2 class="index-content-title">Новости</h2>
+				<a name="news"><h2 class="index-content-title">Новости</h2></a>
 				<ul class="news-preview">
 					<li>
 						<p>Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
@@ -72,7 +74,7 @@
 		</div>
 		<div class="index-content clearfix">
 			<div class="index-content-left">
-				<h2 class="index-content-title">Контактная информация</h2>
+				<a name="contacts"><h2 class="index-content-title">Контактная информация</h2></a>
 				<p>
 					Барбершоп «Бородинский»<br>
 					Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
@@ -83,7 +85,7 @@
 					пн — пт: с 10:00 до 22:00<br>
 					сб — вс: с 10:00 до 19:00
 				</p>
-				<a class="btn" href="#">Как проехать</a>
+				<a class="btn js-open-map" href="#">Как проехать</a>
 				<a class="btn" href="#">Обратная связь</a>
 			</div>
 			<div class="index-content-right">
@@ -140,7 +142,10 @@
 
 	<div class="modal-content-map">
 		<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
-		<div id="yandex-map"></div>
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123825!2d30.32089461590274!3d59.93879686904818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1486717324405" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+		<!-- <div id="yandex-map"></div> -->
 	</div>
 
 	<div class="modal-overlay"></div>
