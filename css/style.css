@@ -75,6 +75,7 @@ body {
 .main-navigation .active span {
 	display: block;
 	padding: 25px 20px;
+	cursor: pointer;
 }
 
 .main-navigation .logo-inner {
@@ -517,6 +518,8 @@ img {
 	padding-right: 85px;
 }
 
+/* Футер */
+
 .main-footer {
 	margin-top: 65px;
 	padding-top: 60px;
@@ -807,4 +810,222 @@ img {
 
 .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
 	transform: rotate(-45deg);
+}
+
+/* Каталог */
+
+.filter-tools {
+	float: left;
+	width: 200px;  
+} 
+
+.filter-tools legend{
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.filter-tools fieldset{
+	border: none;
+}
+
+.filter-tools label{
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.filter-tools .btn{
+	margin-top: 50px;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+input[type="checkbox"]+label{
+	display: block;
+	margin: 20px 0;
+	line-height: 20px;
+	padding-left: 45px;
+	position: relative;
+	cursor: pointer;  
+}
+
+input[type="checkbox"]+label::before{
+	content: "";
+	width: 16px;
+	height: 16px;
+	border: 2px solid #000000;
+	background-color: #f9f6f3;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+input[type="checkbox"]:checked+label::after{
+	content: "";
+	width: 16px;
+	height: 16px;
+	background-image: url("../img/checked.png");
+	background-repeat: no-repeat;
+	background-position: -3px -2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+input[type="radio"]{
+	display: none;
+}
+
+input[type="radio"]+label{
+	display: block;
+	margin: 20px 0;
+	line-height: 20px;
+	padding-left: 45px;
+	position: relative;
+	cursor: pointer;  
+}
+
+input[type="radio"]+label::before{
+	content: "";
+	width: 16px;
+	height: 16px;
+	border: 2px solid #000000;
+	border-radius: 10px;
+	background-color: #f9f6f3;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+input[type="radio"]:checked+label::after{
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background: #000000;
+	position: absolute;
+	top: 6px;
+	left: 5px;
+}
+
+input[type="checkbox"]+label:hover,
+input[type="radio"]+label:hover {
+	color: #663d15;
+}
+
+.catalog-list {
+	float: right;
+	width: 700px;
+	font-size: 0;
+}
+
+.catalog-item {
+	display: inline-block;
+	width: 220px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	vertical-align: top;
+	font-size: 12px;
+	background-color: #ffffff;
+	box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.catalog-item:hover {
+	box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.4);
+}
+
+.catalog-item>h2>a {
+	text-decoration: none;
+	color: #000000;
+}
+
+.catalog-item h2 {
+	margin-left: 16px;
+	text-transform: none;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.price-buy {
+	width: 188px;
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-bottom: 16px;
+	min-height: 43px;
+	font-size: 0;
+}
+
+.price-buy span {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	width: 108px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	background-color: #e5e5e5;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.price-buy .btn {
+	width: 40px;
+	margin: 0;
+	padding: 14px 20px;
+	line-height: 18px;
+}
+
+.pagination {
+	clear: both;
+	margin-top: 45px;
+	font-size: 0;
+}
+
+.pagination a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 14px 20px;
+	margin-right: 6px;
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	vertical-align: top;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	background-color: #000000;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.pagination a:hover,
+.pagination a:active {
+	background-color: #663d15;
+}
+
+.pagination .active {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.pagination .active:hover,
+.pagination .active:active {
+	background-color: #ffffff;
+	cursor: text;
+}
+
+.catalog-item:nth-of-type(3n) {
+	margin-right: 0px;
+}
+
+.catalog-item:nth-last-of-type(1),
+.catalog-item:nth-last-of-type(2),
+.catalog-item:nth-last-of-type(3) {
+	margin-bottom: 0;
 }
